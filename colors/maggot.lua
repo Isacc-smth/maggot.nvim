@@ -1,0 +1,1 @@
+require("maggot").load()
