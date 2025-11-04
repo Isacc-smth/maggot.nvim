@@ -1,27 +1,25 @@
 return {
-    -- sunset.nvim colors
+    -- sunset.nvim colors, shifted for my more greenish scheme
     red = "#DB5F50",
     orange = "#e58e44",
-    green = "#77b886",
-    yellow = "#f7cb92", -- modded to be more of a peach color
-    blue = "#7689d9",
-    magenta = "#8f509d",
-    cyan = "#8fb9f4",
+    green = "#92C359",
+    yellow = "#f7cb92",
+    blue = "#2A5652",
+    subtle_green = "#596E3F",
+    cyan = "#85B790",
     black = "#000000",
     bright_red = "#ff6347",
     bright_orange = "#f6aa6b",
     bright_green = "#a3d6a5",
     bright_yellow = "#ffe56e",
-    bright_blue = "#9eabe6",
-    bright_magenta = "#b78fc2",
-    bright_cyan = "#a4c4ff",
+    bright_blue = "#7AB7A6",
+    bright_subtle_green = "#D4E8BE",
+    bright_cyan = "#AFD9B6",
     white = "#ffffff",
     gutter_fg = "#78808f",
     nontext = "#d2d6dc",
 
-    -- my colors (not all are used as of 07/07/25)
-
-    bg = "#080D04",
+    bg = "#101608",
     fg = "#F6E9B4",
     cursorline = "#12190A",
     selection = "#1B2310",
@@ -29,15 +27,15 @@ return {
     comment = "#757457",
 
     -- Syntax
-    keyword = "#f28fad",
-    Function = "#89b4fa",
-    string = "#f9e2af",
-    constant = "#cdd6f4",
-    type = "#cba6f7",
+    keyword = "#FFE7CA",
+    Function = "#5C743D",
+    string = "#CBCD7B",
+    constant = "#7D9D5D",
+    type = "#95CA83",
     number = "#fab387",
     boolean = "#f38ba8",
-    operator = "#94a3b8",
-    variable = "#e0def4",
+    operator = "#94A793",
+    variable = "#D4E8BE",
 
     -- UI
     cursor = "#f5a97f",

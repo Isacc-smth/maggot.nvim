@@ -1,6 +1,6 @@
 # Maggot.nvim
 
-A green, muddy but calm colorscheme for NeoVim
+A green and muddy colorscheme for NeoVim
 
 ## Screenshots
 

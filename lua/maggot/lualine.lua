@@ -12,8 +12,8 @@ local command = {
 }
 
 local visual = {
-    a = { fg = colors.black, bg = colors.magenta, gui = "bold" },
-    b = { fg = colors.magenta, bg = colors.bg },
+    a = { fg = colors.black, bg = colors.bright_orange, gui = "bold" },
+    b = { fg = colors.constant, bg = colors.bg },
 }
 
 local inactive = {
