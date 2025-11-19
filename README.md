@@ -6,6 +6,9 @@ A green and muddy colorscheme for NeoVim
 
 ## Installation
 
+> [!IMPORTANT]
+> It will very likely not load properly in a non 24 bit color terminal (e.g Mac's builtin)
+
 [lazy.nvim](https://github.com/folke/lazy.nvim)
 
 ```lua
