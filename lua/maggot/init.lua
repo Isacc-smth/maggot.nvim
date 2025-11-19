@@ -1,5 +1,12 @@
 local M = {}
 
+M.default_opts = {
+    italic_comment = false,
+    transparency = false,
+}
+
+M.opts = {}
+
 local TRANSPARENTS = {
     "Normal",
     "SignColumn",
@@ -29,12 +36,13 @@ local function apply_term_colors(colors)
 end
 
 local function apply(opts)
+    opts = opts or {}
     local colors = require("maggot.palette")
     apply_term_colors(colors)
     local groups = require("maggot.groups").setup()
 
     -- apply transparents
-    if opts.transparent then
+    if opts.transparency then
         for _, group in ipairs(TRANSPARENTS) do
             groups[group].bg = nil
         end
@@ -46,17 +54,12 @@ local function apply(opts)
     end
 end
 
---- @class Options
-M.opts = {
-    italic_comment = false,
-    transparent = false,
-}
-
 M.setup = function(opts)
-    M.opts = vim.tbl_deep_extend("force", M.opts, opts or {})
+    M.opts = vim.tbl_deep_extend("force", M.default_opts, opts)
+    M.load(M.opts)
 end
 
-M.load = function()
+M.load = function(opts)
     if vim.fn.has("nvim-0.7") ~= 1 then
         vim.notify(
             "Maggot.nvim: You must use NeoVim 0.7 or higher",
@@ -78,7 +81,7 @@ M.load = function()
     vim.o.termguicolors = true
     vim.g.colors_name = "maggot"
 
-    apply(M.opts)
+    apply(opts)
 end
 
 return M
