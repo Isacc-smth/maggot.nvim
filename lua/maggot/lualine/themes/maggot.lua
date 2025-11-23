@@ -1,7 +1,8 @@
 local colors = require("maggot.palette")
+local opts = require("maggot").opts
 
 local normal = {
-    a = { fg = colors.black, bg = colors.yellow, gui = "bold" },
+    a = { fg = colors.white, bg = colors.yellow, gui = "bold" },
     b = { fg = colors.yellow, bg = colors.bg },
     c = { fg = colors.white, bg = colors.bg },
 }
