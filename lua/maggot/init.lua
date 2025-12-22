@@ -6,12 +6,21 @@ M.default_opts = {
 }
 
 M.opts = {}
+-- TODO: Italics option
 
+-- TODO: Add transparents for Lualine
 local TRANSPARENTS = {
     "Normal",
     "SignColumn",
     "NvimTreeNormal",
     "NvimTreeVertSplit",
+    "BufferLineFill",
+    "BufferLineBackground",
+    "BufferLineBufferSelected",
+    "BufferLineBufferVisible",
+    "BufferLineSeparator",
+    "BufferLineSeparatorSelected",
+    "BufferLineSeparatorVisible",
 }
 
 local function apply_term_colors(colors)
@@ -48,10 +57,25 @@ local function apply(opts)
         end
     end
 
+	if opts.italic_comment then
+		groups.Comment.italic = true
+	end
+
     -- set defined highlights
     for group, setting in pairs(groups) do
         vim.api.nvim_set_hl(0, group, setting)
     end
+
+    -- set colors for nvim-notify
+    local notify_groups = require("maggot.notify")
+    for group, value in pairs(notify_groups.NOTIFY_GROUPS) do
+        vim.api.nvim_set_hl(0, group, { fg = value, default = true })
+    end
+
+    -- -- set links for nvim-notify. They are set like the plugins' default
+    -- for from_group, to_group in pairs(notify_groups.NOTIFY_LINKS) do
+    --     vim.api.nvim_set_hl(0, from_group, { link = to_group, default = true })
+    -- end
 end
 
 M.setup = function(opts)

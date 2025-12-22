@@ -7,7 +7,7 @@ M.setup = function()
     return {
         Normal = { fg = colors.fg, bg = colors.bg },
         NormalFloat = { fg = colors.fg, bg = colors.bg },
-        Comment = { fg = colors.comment, italic = true },
+        Comment = { fg = colors.comment, italic = false },
         Constant = { fg = colors.number },
         String = { fg = colors.number },
         Character = { fg = colors.number },
@@ -35,10 +35,10 @@ M.setup = function()
         StorageClass = { fg = colors.subtle_green },
         Structure = { fg = colors.yellow },
         TypeDef = { fg = colors.yellow },
-        Special = { fg = colors.number, italic = true },
-        SpecialComment = { fg = colors.comment, italic = true },
+        Special = { fg = colors.number, italic = false },
+        SpecialComment = { fg = colors.comment, italic = false },
         Error = { fg = colors.bright_red },
-        Todo = { fg = colors.subtle_green, bold = true, italic = true },
+        Todo = { fg = colors.subtle_green, bold = true, italic = false },
         Underlined = { fg = colors.cyan, underline = true },
 
         Cursor = { fg = colors.cursor },
@@ -333,6 +333,13 @@ M.setup = function()
         CmpItemKindConstant = { link = "@constant" },
         CmpItemKindStruct = { link = "@structure" },
         CmpItemKindTypeParameter = { link = "@parameter" },
+        BufferLineFill = { bg = colors.bg },
+        BufferLineBackground = { bg = nil },
+        BufferLineBufferSelected = { bg = nil },
+        BufferLineBufferVisible = { bg = nil },
+        BufferLineSeparator = { bg = nil },
+        BufferLineSeparatorSelected = { bg = nil },
+        BufferLineSeparatorVisible = { bg = nil },
 
         -- WinPicker
         WinPicker = { fg = colors.bg, bg = colors.number },
